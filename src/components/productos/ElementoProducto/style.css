@@ -1,0 +1,9 @@
+.elemento-producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.elemento-producto img {
+    height: 80px;
+}

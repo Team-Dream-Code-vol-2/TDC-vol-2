@@ -1,0 +1,22 @@
+.lista-productos-carrito {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+}
+
+.encabezado {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-weight: bold;
+}
+
+.botones-carrito {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.botones-carrito button {
+    margin: 0px 10px;
+}

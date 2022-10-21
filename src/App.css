@@ -1,0 +1,34 @@
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #000;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  color: #FFF;
+}
+
+.navbar .menu-items {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar li {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.navbar a {
+  color: #FFF;
+  text-decoration: none;
+}
