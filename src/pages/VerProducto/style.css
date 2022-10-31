@@ -1,0 +1,12 @@
+.ver-producto {
+    display: grid;
+}
+
+.ver-producto .producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ver-producto .producto img {
+    height: 50vh;
+}

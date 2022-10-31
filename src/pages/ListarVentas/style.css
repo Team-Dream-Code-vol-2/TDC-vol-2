@@ -1,0 +1,12 @@
+.lista-ventas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+}
+
+.encabezado {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    font-weight: bold;
+}

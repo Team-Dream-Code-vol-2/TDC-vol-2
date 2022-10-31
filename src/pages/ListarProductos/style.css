@@ -1,0 +1,17 @@
+.titulo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+}
+
+.titulo-btn {
+    justify-self: end;
+    align-self: center;
+}
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 50px;
+}

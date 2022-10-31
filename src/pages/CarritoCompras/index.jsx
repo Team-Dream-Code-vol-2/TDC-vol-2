@@ -1,9 +1,9 @@
 import React from 'react';
 
-import ElementoProducto from './../ElementoProducto';
-import Button from './../../Button';
+import ElementoProducto from '../../components/productos/ElementoProducto';
+import Button from '../../components/Button';
 
-import { productosCarrito } from './../../../assets/data/carrito';
+import { productosCarrito } from '../../assets/data/carrito';
 import './style.css';
 
 export function CarritoCompras() {

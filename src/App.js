@@ -5,8 +5,11 @@ import {
   Link
 } from "react-router-dom";
 
-import ListarProductos from './components/productos/ListarProductos';
-import CarritoCompras from "./components/productos/CarritoCompras";
+import ListarProductos from './pages/ListarProductos';
+import ListarVentas from './pages/ListarVentas';
+import CarritoCompras from "./pages/CarritoCompras";
+import VerProducto from "./pages/VerProducto";
+import FormularioProducto from "./pages/FormularioProducto";
 
 import './App.css';
 
@@ -20,10 +23,16 @@ function App() {
           </div>
           <ul className="menu-items">
             <li>
-              <Link to="/clientes/productos">Listar Productos</Link>
+              <Link to="/productos">Productos</Link>
             </li>
             <li>
-              <Link to="/clientes/carrito">Carrito</Link>
+              <Link to="/ventas">Ventas</Link>
+            </li>
+            <li>
+              <Link to="/admins/productos">Admin Productos</Link>
+            </li>
+            <li>
+              <Link to="/carrito">Carrito</Link>
             </li>
           </ul>
         </nav>
@@ -31,8 +40,13 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Routes>
-          <Route path="/clientes/productos" element={<ListarProductos />} />
-          <Route path="/clientes/carrito" element={<CarritoCompras />} />
+          <Route path="/ventas" element={<ListarVentas />} />
+          <Route path="/productos" element={<ListarProductos />} />
+          <Route path="/admins/productos" element={<ListarProductos rol="admin" />} />
+          <Route path="/productos/crear" element={<FormularioProducto />} />
+          <Route path="/productos/:id" element={<VerProducto />} />
+          <Route path="/productos/:id/editar" element={<FormularioProducto />} />
+          <Route path="/carrito" element={<CarritoCompras />} />
         </Routes>
       </div>
     </Router>
