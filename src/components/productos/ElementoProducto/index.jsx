@@ -2,16 +2,15 @@ import React from 'react';
 
 import './style.css';
 
-export function ElementoCarrito(props) {
-    const producto = props.producto
+export function ElementoCarrito({ price, units, product}) {
 
     return (
         <div className="elemento-producto">
-            <img src={producto.image} alt={producto.title} />
-            <h3>{producto.title}</h3>
-            <p>{producto.amount}</p>
-            <p>{producto.price} USD</p>
-            <p>{producto.price * producto.amount} USD</p>
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p>{units}</p>
+            <p>{price} USD</p>
+            <p>{price * units} COP</p>
         </div>
     )
 }

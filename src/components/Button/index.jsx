@@ -2,12 +2,9 @@ import React from 'react';
 
 import './style.css'
 
-export function Button(props) {
-    const tipo = props.tipo
-    const onClick = props.onClick
-
+export function Button({ tipo, type = 'button', onClick, ...props}) {
     return (
-        <button type="button" className={tipo} onClick={onClick}>
+        <button type={type} className={tipo} onClick={onClick} {...props}>
             {props.children}
         </button>
     )

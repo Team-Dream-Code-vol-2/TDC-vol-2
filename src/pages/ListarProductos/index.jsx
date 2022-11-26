@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
 
 import { TarjetaProducto } from '../../components/productos/TarjetaProducto';
 import { Button } from '../../components/Button';
-import { productos } from '../../assets/data/products';
+import {
+    fetchAll, allProducts,
+} from './../../features/product'
 
 import './style.css';
 
 export function ListarProductos({ rol }) {
     const navigate = useNavigate();
+    const products = useSelector(allProducts);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchAll())
+    }, [dispatch]);
+
     const handleCrear = () => navigate('/productos/crear')
+
     return (
         <div>
             <div className="titulo">
@@ -19,10 +30,12 @@ export function ListarProductos({ rol }) {
                 </div>
             </div>
             <div className="lista-productos">
-                {productos.map(producto => 
-                    <TarjetaProducto 
-                        producto={producto} 
+                {products.map(product =>
+                    <TarjetaProducto
+                        key={product._id}
+                        producto={product}
                         mostrarBotonCompra={rol !== "admin"}
+                        mostrarBottonEliminar={rol === "admin"}
                         mostrarBotonEditar={rol === "admin"} />
                 )}
             </div>
